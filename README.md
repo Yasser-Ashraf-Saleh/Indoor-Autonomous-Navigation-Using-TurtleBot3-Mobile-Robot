@@ -1,5 +1,6 @@
 # Indoor-Autonomous-Navigation-Using-TurtleBot3-Mobile-Robot 
 
+## Introduction
 This project explores advanced techniques for indoor mapping using the TurtleBot3 Mobile Robot, focusing on image enhancement, occupancy grid creation, path planning, and trajectory tracking. Our goal is to improve autonomous navigation in complex indoor environments.
 
 ## Project Objectives
