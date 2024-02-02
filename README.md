@@ -10,6 +10,13 @@ This project explores advanced techniques for indoor mapping using the TurtleBot
 
 ## Methodology
 The proposed approach for operating the turtle bot as a path planner consists of four main steps: image enhancement, creating an occupancy grid, path planning, and trajectory tracking.
+<p align="center">
+<img src="Figures/Original_Map.JPG" width="722" height="445" />
+</p>
+  <em>Figure 1:  Basic idea of the general framework in our approach. The manipulator is attached to a gripper and is tasked with assembling a user-deﬁned spiral brick column using incoming bricks from a belt conveyor.</em>
+<!-- <p align="center">
+</p> -->
+
 
 ### Image Enhancement:
 
@@ -18,34 +25,53 @@ The proposed approach for operating the turtle bot as a path planner consists of
 * Median filtering preserves significant edges while removing most of the noise.
 * Crop the map to define the region of interest and reduce the complexity of planning algorithms.
 * Thresholding is applied to increase contrast, which is necessary for creating an occupancy map.
+<p align="center">
+<img src="Figures/Thresholded.JPG" width="722" height="445" />
+</p>
+  <em>Figure 1:  Basic idea of the general framework in our approach. The manipulator is attached to a gripper and is tasked with assembling a user-deﬁned spiral brick column using incoming bricks from a belt conveyor.</em>
+<!-- <p align="center">
+</p> -->
 ### Occupancy Grid:
 
 *  Occupancy grid mapping is used to convert the map into a binary grid (occupied or unoccupied).
 * Pixels' intensity is considered, and a distinct threshold is set to represent occupied and unoccupied areas.
 * The algorithm doesn't consider the robot's size initially, so the robot's radius is added using the inflate function in MATLAB.
 * The map is prepared for the application of the path planning algorithm.
+
+<p align="center">
+<img src="Figures/Binary_Occupancy_Map.JPG" width="722" height="445" />
+</p>
+  <em>Figure 1:  Basic idea of the general framework in our approach. The manipulator is attached to a gripper and is tasked with assembling a user-deﬁned spiral brick column using incoming bricks from a belt conveyor.</em>
+<!-- <p align="center">
+</p> -->
 ### Path Planning:
 
 * The Probabilistic Roadmap (PRM) algorithm is employed for finding a path between two points on the map.
 * PRM involves sampling nodes from random locations in the free space of the map and connecting them to form random paths.
 * The desired path is determined by connecting points on the set of lines acquired through the sampling process.
 * Two crucial parameters for the efficiency of the algorithm are the number of sampled nodes and the connection distance.
+
+<p align="center">
+<img src="Figures/planning.png" width="722" height="445" />
+</p>
+  <em>Figure 1:  Basic idea of the general framework in our approach. The manipulator is attached to a gripper and is tasked with assembling a user-deﬁned spiral brick column using incoming bricks from a belt conveyor.</em>
+<!-- <p align="center">
+</p> -->
 ### Trajectory Tracking:
 
 * Utilizes a PID controller algorithm for tracking reference trajectories smoothly and efficiently.
 * The trajectory is generated using the PRM algorithm for path planning.
 * The PID controller algorithm is implemented to make the robot follow the generated trajectory in a smooth and fast manner.
 
+<p align="center">
+<img src="Figures/trajectory-tracking.png" width="722" height="445" />
+</p>
+  <em>Figure 1:  Basic idea of the general framework in our approach. The manipulator is attached to a gripper and is tasked with assembling a user-deﬁned spiral brick column using incoming bricks from a belt conveyor.</em>
+<!-- <p align="center">
+</p> -->
 
 In summary, the approach combines image enhancement techniques, occupancy grid mapping, PRM path planning, and PID-based trajectory tracking to enable the turtlebot3 to navigate from a specified start point to an endpoint in a given environment. The integration of these components aims to provide accurate mapping, efficient path planning, and effective trajectory tracking for the robot.
-### Image Enhancement
-We applied various filters to improve image quality, essential for accurate mapping. This step ensures that the occupancy grid and path planning algorithms have the best possible data quality.
 
-### Occupancy Grid Creation
-Using the enhanced images, we generated binary occupancy grids that represent the accessible and obstructed areas within the environment.
-
-### Path Planning and Trajectory Tracking
-We designed algorithms to plan optimal paths based on the occupancy grid and developed a trajectory tracking system to ensure the TurtleBot3 could navigate these paths accurately.
 
 ## Experiments & Results
 
