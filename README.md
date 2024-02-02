@@ -48,7 +48,6 @@ Using the enhanced images, we generated binary occupancy grids that represent th
 We designed algorithms to plan optimal paths based on the occupancy grid and developed a trajectory tracking system to ensure the TurtleBot3 could navigate these paths accurately.
 
 ## Experiments & Results
-Results:
 
 ### Path Interpolation:
 
