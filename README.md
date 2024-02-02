@@ -31,6 +31,7 @@ The proposed approach for operating the turtle bot as a path planner consists of
   <em>Figure 2:Thresholded Image </em>
 <!-- <p align="center">
 </p> -->
+
 ### Occupancy Grid:
 
 *  Occupancy grid mapping is used to convert the map into a binary grid (occupied or unoccupied).
@@ -41,9 +42,10 @@ The proposed approach for operating the turtle bot as a path planner consists of
 <p align="center">
 <img src="Figures/Binary_Occupancy_Map.JPG" />
 </p>
-  <em>Figure 6:Inflated Binary occupied Grid </em>
+  <em>Figure 3:Inflated Binary occupied Grid </em>
 <!-- <p align="center">
 </p> -->
+
 ### Path Planning:
 
 * The Probabilistic Roadmap (PRM) algorithm is employed for finding a path between two points on the map.
@@ -54,9 +56,10 @@ The proposed approach for operating the turtle bot as a path planner consists of
 <p align="center">
 <img src="Figures/planning.png"  />
 </p>
-  <em> Flow chart of the code that is used for Mapping and Planning. </em>
+  <em> Figure 4: Flow chart of the code that is used for Mapping and Planning. </em>
 <!-- <p align="center">
 </p> -->
+
 ### Trajectory Tracking:
 
 * Utilizes a PID controller algorithm for tracking reference trajectories smoothly and efficiently.
@@ -66,7 +69,7 @@ The proposed approach for operating the turtle bot as a path planner consists of
 <p align="center">
 <img src="Figures/trajectory-tracking.png" />
 </p>
-  <em>Flow chart of the code that is used for trajectory tracking. </em>
+  <em>Figure 5: Flow chart of the code that is used for trajectory tracking. </em>
 <!-- <p align="center">
 </p> -->
 
@@ -91,16 +94,17 @@ In summary, the approach combines image enhancement techniques, occupancy grid m
 <p align="center">
 <img src="Figures/First_Path.JPG" />
 </p>
-  <em>Figure 1:  First Path</em>
+  <em>Figure 6:  First Path</em>
 <!-- <p align="center">
 </p> -->
 
 <p align="center">
 <img src="Figures/Second Path.JPG" />
 </p>
-  <em>Figure 1:  Second Path </em>
+  <em>Figure 7:  Second Path </em>
 <!-- <p align="center">
 </p> -->
+
 ### Efficiency and Adaptability:
 
 - The results demonstrate efficiency in tracking complex trajectories, and PID parameters remain effective across different paths.
@@ -109,25 +113,25 @@ In summary, the approach combines image enhancement techniques, occupancy grid m
 <p align="center">
 <img src="Figures/trajectory_tracking_delay_1_6.JPG" />
 </p>
-  <em>Figure 1:  First Path Tracking with delay=1/6 second </em>
+  <em>Figure 8:  First Path Tracking with delay=1/6 second </em>
 <!-- <p align="center">
 </p> -->
 <p align="center">
 <img src="Figures/trajectory_tracking_delay_1_5.JPG" />
 </p>
-  <em>Figure 1: First Path Tracking with delay=1/5 second</em>
+  <em>Figure 9: First Path Tracking with delay=1/5 second</em>
 <!-- <p align="center">
 </p> -->
 <p align="center">
 <img src="Figures/first_path_trajectory_tracking_delay_1_6.JPG" />
 </p>
-  <em>Figure 1: Second Path tracking with delay=1/6 second </em>
+  <em>Figure 10: Second Path tracking with delay=1/6 second </em>
 <!-- <p align="center">
 </p> -->
 <p align="center">
 <img src="Figures/second_path_trajectory_tracking_delay_1_5.JPG" />
 </p>
-  <em>Figure 1:  Second Path tracking with delay=1/5 second </em>
+  <em>Figure 11:  Second Path tracking with delay=1/5 second </em>
 <!-- <p align="center">
 </p> -->
 
