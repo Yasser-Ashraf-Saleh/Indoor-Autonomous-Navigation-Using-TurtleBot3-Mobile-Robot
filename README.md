@@ -11,9 +11,9 @@ This project explores advanced techniques for indoor mapping using the TurtleBot
 ## Methodology
 The proposed approach for operating the turtle bot as a path planner consists of four main steps: image enhancement, creating an occupancy grid, path planning, and trajectory tracking.
 <p align="center">
-<img src="Figures/Original_Map.JPG" width="722" height="445" />
+<img src="Figures/original_map.JPG"/>
 </p>
-  <em>Figure 1:  Basic idea of the general framework in our approach. The manipulator is attached to a gripper and is tasked with assembling a user-deﬁned spiral brick column using incoming bricks from a belt conveyor.</em>
+  <em>Figure 1:  Original Map of the first Floor at HQ </em>
 <!-- <p align="center">
 </p> -->
 
@@ -26,9 +26,9 @@ The proposed approach for operating the turtle bot as a path planner consists of
 * Crop the map to define the region of interest and reduce the complexity of planning algorithms.
 * Thresholding is applied to increase contrast, which is necessary for creating an occupancy map.
 <p align="center">
-<img src="Figures/Thresholded.JPG" width="722" height="445" />
+<img src="Figures/Thresholded.JPG" />
 </p>
-  <em>Figure 1:  Basic idea of the general framework in our approach. The manipulator is attached to a gripper and is tasked with assembling a user-deﬁned spiral brick column using incoming bricks from a belt conveyor.</em>
+  <em>Figure 2:Thresholded Image </em>
 <!-- <p align="center">
 </p> -->
 ### Occupancy Grid:
@@ -39,9 +39,9 @@ The proposed approach for operating the turtle bot as a path planner consists of
 * The map is prepared for the application of the path planning algorithm.
 
 <p align="center">
-<img src="Figures/Binary_Occupancy_Map.JPG" width="722" height="445" />
+<img src="Figures/Binary_Occupancy_Map.JPG" />
 </p>
-  <em>Figure 1:  Basic idea of the general framework in our approach. The manipulator is attached to a gripper and is tasked with assembling a user-deﬁned spiral brick column using incoming bricks from a belt conveyor.</em>
+  <em>Figure 6:Inflated Binary occupied Grid </em>
 <!-- <p align="center">
 </p> -->
 ### Path Planning:
@@ -52,9 +52,9 @@ The proposed approach for operating the turtle bot as a path planner consists of
 * Two crucial parameters for the efficiency of the algorithm are the number of sampled nodes and the connection distance.
 
 <p align="center">
-<img src="Figures/planning.png" width="722" height="445" />
+<img src="Figures/planning.png"  />
 </p>
-  <em>Figure 1:  Basic idea of the general framework in our approach. The manipulator is attached to a gripper and is tasked with assembling a user-deﬁned spiral brick column using incoming bricks from a belt conveyor.</em>
+  <em> Flow chart of the code that is used for Mapping and Planning. </em>
 <!-- <p align="center">
 </p> -->
 ### Trajectory Tracking:
@@ -64,9 +64,9 @@ The proposed approach for operating the turtle bot as a path planner consists of
 * The PID controller algorithm is implemented to make the robot follow the generated trajectory in a smooth and fast manner.
 
 <p align="center">
-<img src="Figures/trajectory-tracking.png" width="722" height="445" />
+<img src="Figures/trajectory-tracking.png" />
 </p>
-  <em>Figure 1:  Basic idea of the general framework in our approach. The manipulator is attached to a gripper and is tasked with assembling a user-deﬁned spiral brick column using incoming bricks from a belt conveyor.</em>
+  <em>Flow chart of the code that is used for trajectory tracking. </em>
 <!-- <p align="center">
 </p> -->
 
@@ -88,10 +88,49 @@ In summary, the approach combines image enhancement techniques, occupancy grid m
 - Figures 10 and 11 display the first and second paths, revealing noise in the image treated as obstacles.
 - The paths exhibit non-linearity and fluctuation due to the randomness in generated nodes, impacting the algorithm's nature.
 - Algorithm suffers from randomness and lacks smoothness in path generation.
+<p align="center">
+<img src="Figures/First_Path.JPG" />
+</p>
+  <em>Figure 1:  First Path</em>
+<!-- <p align="center">
+</p> -->
+
+<p align="center">
+<img src="Figures/Second Path.JPG" />
+</p>
+  <em>Figure 1:  Second Path </em>
+<!-- <p align="center">
+</p> -->
 ### Efficiency and Adaptability:
 
-The results demonstrate efficiency in tracking complex trajectories, and PID parameters remain effective across different paths.
-Changing the delay influences fluctuation percentage, providing adaptability to varying conditions.
+- The results demonstrate efficiency in tracking complex trajectories, and PID parameters remain effective across different paths.
+- Changing the delay influences fluctuation percentage, providing adaptability to varying conditions.
+
+<p align="center">
+<img src="Figures/trajectory_tracking_delay_1_6.JPG" />
+</p>
+  <em>Figure 1:  First Path Tracking with delay=1/6 second </em>
+<!-- <p align="center">
+</p> -->
+<p align="center">
+<img src="Figures/trajectory_tracking_delay_1_5.JPG" />
+</p>
+  <em>Figure 1: First Path Tracking with delay=1/5 second</em>
+<!-- <p align="center">
+</p> -->
+<p align="center">
+<img src="Figures/first_path_trajectory_tracking_delay_1_6.JPG" />
+</p>
+  <em>Figure 1: Second Path tracking with delay=1/6 second </em>
+<!-- <p align="center">
+</p> -->
+<p align="center">
+<img src="Figures/second_path_trajectory_tracking_delay_1_5.JPG" />
+</p>
+  <em>Figure 1:  Second Path tracking with delay=1/5 second </em>
+<!-- <p align="center">
+</p> -->
+
 
 ## Conclusion
 - The implementation of a delivery robot using the turtlebot3 involved static mapping, planning, and dynamic navigation with a PID controller and odometer sensor for environment perception.
